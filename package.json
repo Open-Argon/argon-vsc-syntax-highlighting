@@ -1,9 +1,9 @@
 {
-    "name": "argon",
-    "displayName": "Argon",
-    "description": "",
-    "version": "1.0.0",
-    "publisher": "Ugric",
+    "name": "argon-v3",
+    "displayName": "The Argon Programming Language",
+    "description": "Syntax highlighting and other features for the Argon programming language.",
+    "version": "1.0.1",
+    "publisher": "Open-Argon",
     "engines": {
         "vscode": "^1.60.0"
     },
@@ -11,7 +11,10 @@
     "categories": [
         "Programming Languages"
     ],
-    "repository": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Open-Argon/argon-vsc-syntax-highlighting"
+    },
     "contributes": {
         "languages": [
             {
@@ -24,8 +27,8 @@
                     ".ar"
                 ],
                 "icon": {
-                    "light": "logos/ArLogo.svg",
-                    "dark": "logos/ArLogo.svg"
+                    "light": "logos/ArLogo.png",
+                    "dark": "logos/ArLogo.png"
                 },
                 "configuration": "./language-configuration.json"
             }

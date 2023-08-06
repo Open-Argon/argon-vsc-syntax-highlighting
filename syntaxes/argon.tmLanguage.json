@@ -23,7 +23,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.argon",
-                    "match": "\\b(if|while|for|return|do|else|continue|break|to|from|import|as|forever|try|catch)\\b"
+                    "match": "\\b(if|while|for|return|do|else|continue|break|to|from|import|as|forever|try|catch|not|in)\\b"
                 },
                 {
                     "name": "keyword.operator.argon",
@@ -53,10 +53,13 @@
                             "name": "punctuation.definition.string.begin.argon"
                         }
                     },
-                    "end": "\"",
+                    "end": "(\")|((?:[^\\\\\\n])$)",
                     "endCaptures": {
-                        "0": {
+                        "1": {
                             "name": "punctuation.definition.string.end.argon"
+                        },
+                        "2": {
+                            "name": "invalid.illegal"
                         }
                     },
                     "patterns": [
@@ -78,10 +81,13 @@
                             "name": "punctuation.definition.string.begin.argon"
                         }
                     },
-                    "end": "'",
+                    "end": "(\\')|((?:[^\\\\\\n])$)",
                     "endCaptures": {
-                        "0": {
+                        "1": {
                             "name": "punctuation.definition.string.end.argon"
+                        },
+                        "2": {
+                            "name": "invalid.illegal"
                         }
                     },
                     "patterns": [
