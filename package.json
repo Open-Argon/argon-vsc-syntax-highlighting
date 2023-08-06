@@ -1,29 +1,41 @@
 {
-  "name": "argon",
-  "displayName": "Argon",
-  "description": "",
-  "version": "1.0.0",
-  "publisher": "Ugric",
-  "engines": {
-    "vscode": "^1.81.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "repository": {
-    
-  },
-  "contributes": {
-    "languages": [{
-      "id": "argon",
-      "aliases": ["Argon", "argon"],
-      "extensions": [".ar"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "argon",
-      "scopeName": "source.ar",
-      "path": "./syntaxes/argon.tmLanguage.json"
-    }]
-  }
+    "name": "argon",
+    "displayName": "Argon",
+    "description": "",
+    "version": "1.0.0",
+    "publisher": "Ugric",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "icon": "logos/ArLogo.png",
+    "categories": [
+        "Programming Languages"
+    ],
+    "repository": {},
+    "contributes": {
+        "languages": [
+            {
+                "id": "argon",
+                "aliases": [
+                    "Argon",
+                    "argon"
+                ],
+                "extensions": [
+                    ".ar"
+                ],
+                "icon": {
+                    "light": "logos/ArLogo.svg",
+                    "dark": "logos/ArLogo.svg"
+                },
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "argon",
+                "scopeName": "source.ar",
+                "path": "./syntaxes/argon.tmLanguage.json"
+            }
+        ]
+    }
 }
