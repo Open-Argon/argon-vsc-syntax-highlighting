@@ -1,0 +1,126 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Argon",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.argon",
+                    "match": "\\b(if|while|for|return|do|else|continue|break|to|from|import|as)\\b"
+                },
+                {
+                    "name": "keyword.operator.argon",
+                    "match": "\\b((\\+|\\-|\\*|\\/|\\%|\\^|\\=|\\<|\\>)+)\\b"
+                },
+                {
+                    "name": "keyword.operator.argon",
+                    "match": "\\b(\\&\\&|\\|\\||\\:|\\,|\\!|\\.)\\b"
+                },
+                {
+                    "name": "constant.character.argon",
+                    "match": "\\b(true|false|null)\\b"
+                },
+                {
+                    "name": "keyword.declaration.argon",
+                    "match": "\\b(let)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.argon",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.argon",
+                            "match": "\\\\([^'])"
+                        },
+                        {
+                            "name": "invalid.illegal",
+                            "match": "\\\\."
+                        },
+                        {
+                            "name": "keyword.operator.argon",
+                            "match": "\""
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.argon",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.argon",
+                            "match": "\\\\([^\"])"
+                        },
+                        {
+                            "name": "invalid.illegal",
+                            "match": "\\\\."
+                        },
+                        {
+                            "name": "keyword.operator.argon",
+                            "match": "'"
+                        }
+                    ]
+                }
+            ]
+        },
+        "comments": {
+            "name": "comment.line",
+            "match": "#.*$"
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.argon",
+                    "match": "\\b((((([0-9]+(\\.[0-9]+)?)|(\\.[0-9]+))(e((\\-|\\+)?([0-9]+(\\.[0-9]+)?)))?)|([0-9]+/[0-9]+)))\\b"
+                },
+                {
+                    "name": "constant.numeric.argon",
+                    "match": "\\b((0b[10]+(.\\[10]+)?(e((\\-|\\+)?([0-9]+(\\.[0-9]+)?)))?))\\b"
+                },
+                {
+                    "name": "constant.numeric.argon",
+                    "match": "\\b((0x[a-fA-F0-9]+(\\.[a-fA-F0-9]+)?))\\b"
+                },
+                {
+                    "name": "constant.numeric.argon",
+                    "match": "\\b((0o[0-7]+(\\.[0-7]+)?(e((\\-|\\+)?([0-9]+(\\.[0-9]+)?)))?))\\b"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "\\b(([a-zA-Z_]|(\\p{L}\\p{M}*))([a-zA-Z0-9_]|(\\p{L}\\p{M}*))*)\\b\\("
+                },
+                {
+                    "name": "variable.name",
+                    "match": "\\b(([a-zA-Z_]|(\\p{L}\\p{M}*))([a-zA-Z0-9_]|(\\p{L}\\p{M}*))*)\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.ar"
+}
