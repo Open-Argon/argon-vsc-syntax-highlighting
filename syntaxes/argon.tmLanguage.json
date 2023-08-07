@@ -135,7 +135,7 @@
                 },
                 {
                     "name": "support.function.argon",
-                    "match": "\\b(global|term|file|π|PI|e|√|ArgonVersion|number|string|socket|infinity|map|hex|buffer|throwError|array|boolean|time|ln|log|logN|thread|input|round|floor|ceil|sqrt|file|random|json|sin|arcsin|cos|arccos|tan|arctan|cosec|arccosec|sec|arcsec|cot|arccot|todeg|colour|torad|abs|fraction|dir|subprocess|sequence|exit|error|chr|ord|max|min|path|typeof|sha256)\\b"
+                    "match": "\\b(global|term|file|π|PI|e|√|ArgonVersion|number|string|socket|infinity|map|hex|buffer|throwError|array|boolean|time|ln|log|logN|thread|input|round|floor|ceil|sqrt|file|random|json|sin|arcsin|cos|arccos|tan|arctan|cosec|arccosec|sec|arcsec|cot|arccot|todeg|colour|torad|abs|fraction|dir|subprocess|sequence|exit|error|chr|ord|max|min|path|typeof|sha256|program)\\b"
                 },
                 {
                     "name": "variable.name.argon",
