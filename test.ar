@@ -1,0 +1,3 @@
+forever do
+    term.log("hello world")
+    time.snooze(2)

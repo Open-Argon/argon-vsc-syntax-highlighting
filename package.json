@@ -2,7 +2,7 @@
     "name": "argon-v3",
     "displayName": "The Argon Programming Language",
     "description": "Syntax highlighting and other features for the Argon programming language.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "Open-Argon",
     "engines": {
         "vscode": "^1.60.0"
