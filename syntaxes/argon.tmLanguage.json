@@ -5,6 +5,9 @@
         {
             "include": "#keywords"
         },
+        { 
+            "include": "#templates" 
+        },
         {
             "include": "#strings"
         },
@@ -19,6 +22,51 @@
         }
     ],
     "repository": {
+        "templates": {
+            "patterns": [
+                {
+                "name": "string.template.argon",
+                "begin": "`",
+                "beginCaptures": {
+                    "0": { "name": "punctuation.definition.string.begin.argon" }
+                },
+                "end": "`",
+                "endCaptures": {
+                    "0": { "name": "punctuation.definition.string.end.argon" }
+                },
+                "patterns": [
+                    {
+                    "include": "#interpolation"
+                    }
+                ]
+                }
+            ]
+        },
+        "interpolation": {
+            "patterns": [
+                {
+                "name": "meta.interpolation.argon",
+                "begin": "\\$\\(",
+                "beginCaptures": {
+                    "0": {
+                    "name": "keyword.operator.argon"
+                    }
+                },
+                "end": "\\)",
+                "endCaptures": {
+                    "0": {
+                    "name": "keyword.operator.argon"
+                    }
+                },
+                "patterns": [
+                    { "include": "#keywords" },
+                    { "include": "#numbers" },
+                    { "include": "#strings" },
+                    { "include": "#variables" }
+                ]
+                }
+            ]
+        },
         "keywords": {
             "patterns": [
                 {
