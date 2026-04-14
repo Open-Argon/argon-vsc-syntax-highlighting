@@ -71,7 +71,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.argon",
-                    "match": "\\b(if|while|for|return|do|else|continue|break|to|until|from|import|as|expose|forever|try|catch|not|in)\\b"
+                    "match": "\\b(if|while|for|return|do|else|continue|break|to|until|from|import|as|expose|forever|try|catch|not|in|throw)\\b"
                 },
                 {
                     "name": "keyword.operator.argon",
